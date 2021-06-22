@@ -7,3 +7,8 @@
     <?php wp_head() ?>
 </head>
 <body>
+    <div id="page" class="site">
+        <header>
+            <?php get_template_part('template-parts/nav'); ?>
+        </header>
+    </div>
