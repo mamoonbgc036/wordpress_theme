@@ -1,4 +1,5 @@
 <?php 
+
 function mamoon_enqueue_scripts(){
     // Registering style
     wp_register_style('stylesheet', get_stylesheet_uri(), [], filemtime(get_template_directory(). '/style.css'), 'all');
