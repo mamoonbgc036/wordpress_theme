@@ -1,5 +1,13 @@
 <?php 
 
+if(!defined("wordpress_theme")){
+    define("wordpress_theme", untrailingslashit(get_template_directory()));
+}
+
+require_once wordpress_theme."/inc/helpers/autoload.php";
+
+\wordpress_theme\inc\classes\wordpress_theme::get_instance();
+
 function mamoon_enqueue_scripts(){
     // Registering style
     wp_register_style('stylesheet', get_stylesheet_uri(), [], filemtime(get_template_directory(). '/style.css'), 'all');
