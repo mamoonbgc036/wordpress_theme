@@ -1,5 +1,4 @@
 <?php 
-
 if(!defined("wordpress_theme")){
     define("wordpress_theme", untrailingslashit(get_template_directory()));
 }
