@@ -1,13 +1,12 @@
 <?php 
-require_once "test.php";
-new test();die();
 if(!defined("wordpress_theme")){
     define("wordpress_theme", untrailingslashit(get_template_directory()));
 }
 
 require_once wordpress_theme."/inc/helpers/autoload.php";
+//require_once "wordpress_theme/inc/helpers/autoload.php";
 
-\wordpress_theme\inc\classes\wordpress_theme::get_instance();
+wordpress_theme\inc\classes\wordpress_theme::get_instance();
 
 function mamoon_enqueue_scripts(){
     // Registering style
