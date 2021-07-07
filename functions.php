@@ -1,4 +1,6 @@
 <?php 
+require_once "test.php";
+new test();die();
 if(!defined("wordpress_theme")){
     define("wordpress_theme", untrailingslashit(get_template_directory()));
 }
