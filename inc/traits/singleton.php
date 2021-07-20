@@ -1,7 +1,9 @@
 <?php 
 
     namespace wordpress_theme\inc\traits;
+
     trait Singleton{
+
         protected function __construct(){}
         final protected function __clone(){}
         final public static function get_instance(){
@@ -10,8 +12,9 @@
 
             if ( ! isset( $instance[ $called_class ] ) ){
                 $instance[ $called_class ] = new $called_class();
-                do_action( sprintf( 'wordpress_theme_singleton_init%s', $called_class) );
+                //do_action( sprintf( 'wordpress_theme_singleton_init%s', $called_class) );
             }
             return $instance[ $called_class ];
         }
+
     }
